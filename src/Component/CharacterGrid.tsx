@@ -12,7 +12,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {aRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -20,7 +20,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {kaRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -28,7 +28,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {saRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -36,7 +36,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {taRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -44,7 +44,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {naRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -52,7 +52,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {haRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -60,7 +60,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {maRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -68,7 +68,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {yaRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -76,7 +76,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {raRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -84,7 +84,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {waRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -92,7 +92,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {nRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -100,7 +100,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {gaRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -108,7 +108,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {zaRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -116,7 +116,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {daRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -124,7 +124,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {baRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
@@ -132,7 +132,7 @@ const CharacterGrid = ({characters,title}:{characters: Kana[], title : string })
             <div className="grid__cards">
                 {paRow.map((item:Kana) => (
                     <CharacterCard
-                        character={title === "Hiragana" ? item.hiragana : item.katakana}
+                        character={title === "hiragana" ? item.hiragana : item.katakana}
                         romanji={item.romanji}
                     />
                 ))}
