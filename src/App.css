@@ -314,3 +314,23 @@ body {
 
 .quiz__feedback--correct   { color: #4a7c4e; }
 .quiz__feedback--incorrect { color: var(--accent); }
+
+.quiz__scores {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.quiz__score {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.quiz__best-score {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: #8b6040;
+  letter-spacing: 0.1em;
+}

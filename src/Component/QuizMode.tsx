@@ -1,5 +1,5 @@
-import type {Kana} from "../data/kana.ts";
-import {useState} from "react";
+import type { Kana } from "../data/kana.ts";
+import { useQuiz } from "../hooks/useQuiz.ts";
 
 interface QuizModeProps {
     script: 'hiragana' | 'katakana';
@@ -7,42 +7,17 @@ interface QuizModeProps {
 }
 
 function QuizMode({ script, kanaData }: QuizModeProps) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [userAnswer, setUserAnswer] = useState('');
-    const [score, setScore] = useState({ correct: 0, total: 0 });
-    const [feedback, setFeedback] = useState('');
-
-    const currentKana = kanaData[currentIndex];
-    const displayChar = script === 'hiragana'
-        ? currentKana.hiragana
-        : currentKana.katakana;
-
-    const isCorrectFeedback = feedback === 'Correct !';
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        const isCorrect = userAnswer.toLowerCase().trim() ===
-            currentKana.romanji.toLowerCase();
-
-        setScore({
-            correct: score.correct + (isCorrect ? 1 : 0),
-            total: score.total + 1
-        });
-
-        setFeedback(isCorrect ? 'Correct !' : `Incorrect. C'était ${currentKana.romanji}`);
-        setUserAnswer('');
-
-        setTimeout(() => {
-            setCurrentIndex((currentIndex + 1) % kanaData.length);
-            setFeedback('');
-        }, 1500);
-    };
+    const { displayChar, userAnswer, score, bestScore, feedback, isCorrectFeedback, inputRef, setUserAnswer, handleSubmit } = useQuiz(script, kanaData);
 
     return (
         <div className="quiz">
-            <div className="quiz__score">
-                {score.correct} / {score.total}
+            <div className="quiz__scores">
+                <span className="quiz__score">
+                    Score : {score.correct} / {score.total}
+                </span>
+                <span className="quiz__best-score">
+                    ★ Record : {bestScore}
+                </span>
             </div>
 
             <div className="quiz__card">
@@ -53,6 +28,7 @@ function QuizMode({ script, kanaData }: QuizModeProps) {
                 <input
                     className="quiz__input"
                     type="text"
+                    ref={inputRef}
                     value={userAnswer}
                     onChange={e => setUserAnswer(e.target.value)}
                     placeholder="Rōmaji..."
