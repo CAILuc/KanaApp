@@ -9,7 +9,7 @@ interface UseQuizReturn {
     bestScore: number;
     feedback: string;
     isCorrectFeedback: boolean;
-    inputRef: React.RefObject<HTMLInputElement>;
+    inputRef: React.RefObject<HTMLInputElement | null>;
     setUserAnswer: (value: string) => void;
     handleSubmit: (e: React.FormEvent) => void;
 }
@@ -20,8 +20,7 @@ export function useQuiz(script: 'hiragana' | 'katakana', kanaData: Kana[]): UseQ
     const [score, setScore] = useState({ correct: 0, total: 0 });
     const [feedback, setFeedback] = useState('');
     const [bestScore, setBestScore] = useLocalStorage<number>('kana-best-score', 0);
-    const inputRef = useRef<HTMLInputElement>(null);
-
+    const inputRef: React.RefObject<HTMLInputElement | null> = useRef<HTMLInputElement | null>(null);
     const currentKana = kanaData[currentIndex];
     const displayChar = script === 'hiragana' ? currentKana.hiragana : currentKana.katakana;
     const isCorrectFeedback = feedback === 'Correct !';
